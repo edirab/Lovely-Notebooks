@@ -1,0 +1,346 @@
+Microsoft Windows [Version 10.0.17763.1518]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.
+
+C:\Users\corsair>conda
+usage: conda-script.py [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean        Remove unused packages and caches.
+    config       Modify configuration values in .condarc. This is modeled
+                 after the git config command. Writes to the user .condarc
+                 file (C:\Users\corsair\.condarc) by default.
+    create       Create a new conda environment from a list of specified
+                 packages.
+    help         Displays a list of available conda commands and their help
+                 strings.
+    info         Display information about current conda install.
+    init         Initialize conda for shell interaction. [Experimental]
+    install      Installs a list of packages into a specified conda
+                 environment.
+    list         List linked packages in a conda environment.
+    package      Low-level conda package utility. (EXPERIMENTAL)
+    remove       Remove a list of packages from a specified conda environment.
+    uninstall    Alias for conda remove.
+    run          Run an executable in a conda environment. [Experimental]
+    search       Search for packages and display associated information. The
+                 input is a MatchSpec, a query language for conda packages.
+                 See examples below.
+    update       Updates conda packages to the latest compatible version.
+    upgrade      Alias for conda update.
+
+optional arguments:
+  -h, --help     Show this help message and exit.
+  -V, --version  Show the conda version number and exit.
+
+conda commands available from other packages:
+  build
+  convert
+  debug
+  develop
+  env
+  index
+  inspect
+  metapackage
+  render
+  server
+  skeleton
+  verify
+
+C:\Users\corsair>conda create  -n tf-2-gpu tensorflow-gpu
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.8.2
+  latest version: 4.9.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: E:\Anaconda3\envs\tf-2-gpu
+
+  added / updated specs:
+    - tensorflow-gpu
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _tflow_select-2.1.0        |              gpu           3 KB
+    absl-py-0.10.0             |           py37_0         169 KB
+    aiohttp-3.6.3              |   py37he774522_0         513 KB
+    astor-0.8.1                |           py37_0          47 KB
+    async-timeout-3.0.1        |           py37_0          12 KB
+    attrs-20.2.0               |             py_0          42 KB
+    blinker-1.4                |           py37_0          22 KB
+    brotlipy-0.7.0             |py37he774522_1000         336 KB
+    ca-certificates-2020.10.14 |                0         122 KB
+    cachetools-4.1.1           |             py_0          12 KB
+    certifi-2020.6.20          |           py37_0         156 KB
+    cffi-1.14.3                |   py37h7a1dbc1_0         222 KB
+    click-7.1.2                |             py_0          71 KB
+    cryptography-3.1.1         |   py37h7a1dbc1_0         528 KB
+    cudatoolkit-10.1.243       |       h74a9793_0       300.3 MB
+    cudnn-7.6.5                |       cuda10.1_0       179.1 MB
+    gast-0.2.2                 |           py37_0         155 KB
+    google-auth-1.22.1         |             py_0          61 KB
+    google-auth-oauthlib-0.4.1 |             py_2          20 KB
+    google-pasta-0.2.0         |             py_0          46 KB
+    grpcio-1.31.0              |   py37he7da953_0         1.5 MB
+    idna-2.10                  |             py_0          50 KB
+    importlib-metadata-2.0.0   |             py_1          35 KB
+    intel-openmp-2020.2        |              254         1.6 MB
+    keras-applications-1.0.8   |             py_1          29 KB
+    keras-preprocessing-1.1.0  |             py_1          37 KB
+    libprotobuf-3.13.0.1       |       h200bbdf_0         1.8 MB
+    markdown-3.3.2             |           py37_0         164 KB
+    mkl-2020.2                 |              256       109.3 MB
+    mkl_fft-1.2.0              |   py37h45dec08_0         118 KB
+    mkl_random-1.1.1           |   py37h47e9c7a_0         233 KB
+    multidict-4.7.6            |   py37he774522_1          60 KB
+    numpy-1.19.1               |   py37h5510c5b_0          22 KB
+    numpy-base-1.19.1          |   py37ha3acd2a_0         3.8 MB
+    oauthlib-3.1.0             |             py_0          91 KB
+    openssl-1.1.1h             |       he774522_0         4.8 MB
+    opt_einsum-3.1.0           |             py_0          54 KB
+    pip-20.2.4                 |           py37_0         1.8 MB
+    protobuf-3.13.0.1          |   py37ha925a31_1         535 KB
+    pyasn1-0.4.8               |             py_0          57 KB
+    pyasn1-modules-0.2.8       |             py_0          72 KB
+    pycparser-2.20             |             py_2          94 KB
+    pyjwt-1.7.1                |           py37_0          49 KB
+    pyopenssl-19.1.0           |             py_1          48 KB
+    pysocks-1.7.1              |           py37_1          28 KB
+    python-3.7.9               |       h60c2a47_0        14.4 MB
+    requests-2.24.0            |             py_0          56 KB
+    requests-oauthlib-1.3.0    |             py_0          23 KB
+    rsa-4.6                    |             py_0          26 KB
+    scipy-1.5.2                |   py37h9439919_0        11.8 MB
+    setuptools-50.3.0          |   py37h9490d1a_1         727 KB
+    six-1.15.0                 |             py_0          13 KB
+    sqlite-3.33.0              |       h2a8f88b_0         809 KB
+    tensorboard-2.2.1          |     pyh532a8cf_0         2.4 MB
+    tensorboard-plugin-wit-1.6.0|             py_0         630 KB
+    tensorflow-2.1.0           |gpu_py37h7db9008_0           4 KB
+    tensorflow-base-2.1.0      |gpu_py37h55f5790_0       105.3 MB
+    tensorflow-estimator-2.1.0 |     pyhd54b08b_0         251 KB
+    tensorflow-gpu-2.1.0       |       h0d30ee6_0           3 KB
+    termcolor-1.1.0            |           py37_1           8 KB
+    urllib3-1.25.11            |             py_0          99 KB
+    vs2015_runtime-14.16.27012 |       hf0eaf9b_3         1.2 MB
+    werkzeug-0.16.1            |             py_0         258 KB
+    wheel-0.35.1               |             py_0          37 KB
+    wrapt-1.12.1               |   py37he774522_1          49 KB
+    yarl-1.6.2                 |   py37he774522_0         130 KB
+    zipp-3.3.1                 |             py_0          12 KB
+    zlib-1.2.11                |       h62dcd97_4         113 KB
+    ------------------------------------------------------------
+                                           Total:       746.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  _tflow_select      pkgs/main/win-64::_tflow_select-2.1.0-gpu
+  absl-py            pkgs/main/win-64::absl-py-0.10.0-py37_0
+  aiohttp            pkgs/main/win-64::aiohttp-3.6.3-py37he774522_0
+  astor              pkgs/main/win-64::astor-0.8.1-py37_0
+  async-timeout      pkgs/main/win-64::async-timeout-3.0.1-py37_0
+  attrs              pkgs/main/noarch::attrs-20.2.0-py_0
+  blas               pkgs/main/win-64::blas-1.0-mkl
+  blinker            pkgs/main/win-64::blinker-1.4-py37_0
+  brotlipy           pkgs/main/win-64::brotlipy-0.7.0-py37he774522_1000
+  ca-certificates    pkgs/main/win-64::ca-certificates-2020.10.14-0
+  cachetools         pkgs/main/noarch::cachetools-4.1.1-py_0
+  certifi            pkgs/main/win-64::certifi-2020.6.20-py37_0
+  cffi               pkgs/main/win-64::cffi-1.14.3-py37h7a1dbc1_0
+  chardet            pkgs/main/win-64::chardet-3.0.4-py37_1003
+  click              pkgs/main/noarch::click-7.1.2-py_0
+  cryptography       pkgs/main/win-64::cryptography-3.1.1-py37h7a1dbc1_0
+  cudatoolkit        pkgs/main/win-64::cudatoolkit-10.1.243-h74a9793_0
+  cudnn              pkgs/main/win-64::cudnn-7.6.5-cuda10.1_0
+  gast               pkgs/main/win-64::gast-0.2.2-py37_0
+  google-auth        pkgs/main/noarch::google-auth-1.22.1-py_0
+  google-auth-oauth~ pkgs/main/noarch::google-auth-oauthlib-0.4.1-py_2
+  google-pasta       pkgs/main/noarch::google-pasta-0.2.0-py_0
+  grpcio             pkgs/main/win-64::grpcio-1.31.0-py37he7da953_0
+  h5py               pkgs/main/win-64::h5py-2.10.0-py37h5e291fa_0
+  hdf5               pkgs/main/win-64::hdf5-1.10.4-h7ebc959_0
+  icc_rt             pkgs/main/win-64::icc_rt-2019.0.0-h0cc432a_1
+  idna               pkgs/main/noarch::idna-2.10-py_0
+  importlib-metadata pkgs/main/noarch::importlib-metadata-2.0.0-py_1
+  intel-openmp       pkgs/main/win-64::intel-openmp-2020.2-254
+  keras-applications pkgs/main/noarch::keras-applications-1.0.8-py_1
+  keras-preprocessi~ pkgs/main/noarch::keras-preprocessing-1.1.0-py_1
+  libprotobuf        pkgs/main/win-64::libprotobuf-3.13.0.1-h200bbdf_0
+  markdown           pkgs/main/win-64::markdown-3.3.2-py37_0
+  mkl                pkgs/main/win-64::mkl-2020.2-256
+  mkl-service        pkgs/main/win-64::mkl-service-2.3.0-py37hb782905_0
+  mkl_fft            pkgs/main/win-64::mkl_fft-1.2.0-py37h45dec08_0
+  mkl_random         pkgs/main/win-64::mkl_random-1.1.1-py37h47e9c7a_0
+  multidict          pkgs/main/win-64::multidict-4.7.6-py37he774522_1
+  numpy              pkgs/main/win-64::numpy-1.19.1-py37h5510c5b_0
+  numpy-base         pkgs/main/win-64::numpy-base-1.19.1-py37ha3acd2a_0
+  oauthlib           pkgs/main/noarch::oauthlib-3.1.0-py_0
+  openssl            pkgs/main/win-64::openssl-1.1.1h-he774522_0
+  opt_einsum         pkgs/main/noarch::opt_einsum-3.1.0-py_0
+  pip                pkgs/main/win-64::pip-20.2.4-py37_0
+  protobuf           pkgs/main/win-64::protobuf-3.13.0.1-py37ha925a31_1
+  pyasn1             pkgs/main/noarch::pyasn1-0.4.8-py_0
+  pyasn1-modules     pkgs/main/noarch::pyasn1-modules-0.2.8-py_0
+  pycparser          pkgs/main/noarch::pycparser-2.20-py_2
+  pyjwt              pkgs/main/win-64::pyjwt-1.7.1-py37_0
+  pyopenssl          pkgs/main/noarch::pyopenssl-19.1.0-py_1
+  pyreadline         pkgs/main/win-64::pyreadline-2.1-py37_1
+  pysocks            pkgs/main/win-64::pysocks-1.7.1-py37_1
+  python             pkgs/main/win-64::python-3.7.9-h60c2a47_0
+  requests           pkgs/main/noarch::requests-2.24.0-py_0
+  requests-oauthlib  pkgs/main/noarch::requests-oauthlib-1.3.0-py_0
+  rsa                pkgs/main/noarch::rsa-4.6-py_0
+  scipy              pkgs/main/win-64::scipy-1.5.2-py37h9439919_0
+  setuptools         pkgs/main/win-64::setuptools-50.3.0-py37h9490d1a_1
+  six                pkgs/main/noarch::six-1.15.0-py_0
+  sqlite             pkgs/main/win-64::sqlite-3.33.0-h2a8f88b_0
+  tensorboard        pkgs/main/noarch::tensorboard-2.2.1-pyh532a8cf_0
+  tensorboard-plugi~ pkgs/main/noarch::tensorboard-plugin-wit-1.6.0-py_0
+  tensorflow         pkgs/main/win-64::tensorflow-2.1.0-gpu_py37h7db9008_0
+  tensorflow-base    pkgs/main/win-64::tensorflow-base-2.1.0-gpu_py37h55f5790_0
+  tensorflow-estima~ pkgs/main/noarch::tensorflow-estimator-2.1.0-pyhd54b08b_0
+  tensorflow-gpu     pkgs/main/win-64::tensorflow-gpu-2.1.0-h0d30ee6_0
+  termcolor          pkgs/main/win-64::termcolor-1.1.0-py37_1
+  urllib3            pkgs/main/noarch::urllib3-1.25.11-py_0
+  vc                 pkgs/main/win-64::vc-14.1-h0510ff6_4
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.16.27012-hf0eaf9b_3
+  werkzeug           pkgs/main/noarch::werkzeug-0.16.1-py_0
+  wheel              pkgs/main/noarch::wheel-0.35.1-py_0
+  win_inet_pton      pkgs/main/win-64::win_inet_pton-1.1.0-py37_0
+  wincertstore       pkgs/main/win-64::wincertstore-0.2-py37_0
+  wrapt              pkgs/main/win-64::wrapt-1.12.1-py37he774522_1
+  yarl               pkgs/main/win-64::yarl-1.6.2-py37he774522_0
+  zipp               pkgs/main/noarch::zipp-3.3.1-py_0
+  zlib               pkgs/main/win-64::zlib-1.2.11-h62dcd97_4
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+mkl_fft-1.2.0        | 118 KB    | ######################################################################### | 100%
+brotlipy-0.7.0       | 336 KB    | ######################################################################### | 100%
+cryptography-3.1.1   | 528 KB    | ######################################################################### | 100%
+tensorflow-estimator | 251 KB    | ######################################################################### | 100%
+libprotobuf-3.13.0.1 | 1.8 MB    | ######################################################################### | 100%
+python-3.7.9         | 14.4 MB   | ######################################################################### | 100%
+zipp-3.3.1           | 12 KB     | ######################################################################### | 100%
+tensorboard-2.2.1    | 2.4 MB    | ######################################################################### | 100%
+click-7.1.2          | 71 KB     | ######################################################################### | 100%
+keras-preprocessing- | 37 KB     | ######################################################################### | 100%
+yarl-1.6.2           | 130 KB    | ######################################################################### | 100%
+openssl-1.1.1h       | 4.8 MB    | ######################################################################### | 100%
+keras-applications-1 | 29 KB     | ######################################################################### | 100%
+wheel-0.35.1         | 37 KB     | ######################################################################### | 100%
+werkzeug-0.16.1      | 258 KB    | ######################################################################### | 100%
+cachetools-4.1.1     | 12 KB     | ######################################################################### | 100%
+tensorflow-gpu-2.1.0 | 3 KB      | ######################################################################### | 100%
+requests-oauthlib-1. | 23 KB     | ######################################################################### | 100%
+google-auth-oauthlib | 20 KB     | ######################################################################### | 100%
+sqlite-3.33.0        | 809 KB    | ######################################################################### | 100%
+idna-2.10            | 50 KB     | ######################################################################### | 100%
+async-timeout-3.0.1  | 12 KB     | ######################################################################### | 100%
+certifi-2020.6.20    | 156 KB    | ######################################################################### | 100%
+vs2015_runtime-14.16 | 1.2 MB    | ######################################################################### | 100%
+numpy-base-1.19.1    | 3.8 MB    | ######################################################################### | 100%
+tensorflow-base-2.1. | 105.3 MB  | ######################################################################### | 100%
+importlib-metadata-2 | 35 KB     | ######################################################################### | 100%
+blinker-1.4          | 22 KB     | ######################################################################### | 100%
+requests-2.24.0      | 56 KB     | ######################################################################### | 100%
+wrapt-1.12.1         | 49 KB     | ######################################################################### | 100%
+gast-0.2.2           | 155 KB    | ######################################################################### | 100%
+tensorboard-plugin-w | 630 KB    | ######################################################################### | 100%
+tensorflow-2.1.0     | 4 KB      | ######################################################################### | 100%
+cffi-1.14.3          | 222 KB    | ######################################################################### | 100%
+pyjwt-1.7.1          | 49 KB     | ######################################################################### | 100%
+oauthlib-3.1.0       | 91 KB     | ######################################################################### | 100%
+_tflow_select-2.1.0  | 3 KB      | ######################################################################### | 100%
+astor-0.8.1          | 47 KB     | ######################################################################### | 100%
+cudatoolkit-10.1.243 | 300.3 MB  | ######################################################################### | 100%
+grpcio-1.31.0        | 1.5 MB    | ######################################################################### | 100%
+six-1.15.0           | 13 KB     | ######################################################################### | 100%
+opt_einsum-3.1.0     | 54 KB     | ######################################################################### | 100%
+urllib3-1.25.11      | 99 KB     | ######################################################################### | 100%
+zlib-1.2.11          | 113 KB    | ######################################################################### | 100%
+google-auth-1.22.1   | 61 KB     | ######################################################################### | 100%
+cudnn-7.6.5          | 179.1 MB  | ######################################################################### | 100%
+google-pasta-0.2.0   | 46 KB     | ######################################################################### | 100%
+intel-openmp-2020.2  | 1.6 MB    | ######################################################################### | 100%
+multidict-4.7.6      | 60 KB     | ######################################################################### | 100%
+pip-20.2.4           | 1.8 MB    | ######################################################################### | 100%
+scipy-1.5.2          | 11.8 MB   | ######################################################################### | 100%
+rsa-4.6              | 26 KB     | ######################################################################### | 100%
+markdown-3.3.2       | 164 KB    | ######################################################################### | 100%
+ca-certificates-2020 | 122 KB    | ######################################################################### | 100%
+mkl-2020.2           | 109.3 MB  | ######################################################################### | 100%
+pyasn1-0.4.8         | 57 KB     | ######################################################################### | 100%
+numpy-1.19.1         | 22 KB     | ######################################################################### | 100%
+mkl_random-1.1.1     | 233 KB    | ######################################################################### | 100%
+pyopenssl-19.1.0     | 48 KB     | ######################################################################### | 100%
+pysocks-1.7.1        | 28 KB     | ######################################################################### | 100%
+aiohttp-3.6.3        | 513 KB    | ######################################################################### | 100%
+pycparser-2.20       | 94 KB     | ######################################################################### | 100%
+termcolor-1.1.0      | 8 KB      | ######################################################################### | 100%
+absl-py-0.10.0       | 169 KB    | ######################################################################### | 100%
+attrs-20.2.0         | 42 KB     | ######################################################################### | 100%
+pyasn1-modules-0.2.8 | 72 KB     | ######################################################################### | 100%
+protobuf-3.13.0.1    | 535 KB    | ######################################################################### | 100%
+setuptools-50.3.0    | 727 KB    | ######################################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate tf-2-gpu
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+C:\Users\corsair>conda activate tf-2-gpu
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+If using 'conda activate' from a batch script, change your
+invocation to 'CALL conda.bat activate'.
+
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - cmd.exe
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+
+C:\Users\corsair>conda.bat activate tf-2-gpu
