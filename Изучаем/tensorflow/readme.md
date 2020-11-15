@@ -2,7 +2,31 @@
 
 #### Часть 1. Установка tensorflow-gpu и зависимостей
 
-NB: TensorFlow 2.3 требует CUDA 10.1 и CuDNN 8.0.4.30
+NB 1: TensorFlow 2.3 требует **CUDA 10.1 и CuDNN 8.0.4.30**
+
+- Скачиваем `CUDA Toolkit` нужной версии с официального сайта [NVidia](https://developer.nvidia.com/cuda-toolkit-archive).
+При установке выбираем пункты:
+
+        Runtime, 
+        Development, 
+        Driver & Audio Driver.
+        
+    Документация, примеры, плагины для интеграции с Visual Studio не нужны.
+    Путь установки по умолчанию это `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1`. 
+    
+    Одновременно может быть установлено сразу несколько версий библиотек (но не драйверов ОС). 
+    В этом случае стоит проверить правильность путей в переменных среды.
+    ![](./cuda_pathes.png)
+    
+    `CUDA_PATH` будет указывать на последнюю установленную версию. 
+    
+
+- Скчачиваем `CuDNN` с офф. сайта (потребуется регистрация на NVidia Developers). Распаковываем файлы из
+    + `bin` в `bin`,
+    + `include` в `include`,
+    + `lib` в `lib` 
+
+нужной версии `CUDA Toolkit`.
 
 - Обновим Анаконду: 
 
