@@ -2,7 +2,6 @@
     
 **Create a new repository on the command line**
     
-    
     echo "# ohlala" >> README.md
     git init
     git add README.md
@@ -27,26 +26,23 @@ NB: Вот это `-M`нужно только для переименовани�
 
 - Переключение нармального отображения кириллицы в консоли:
 
-
     git config --local core.quotepath false
 
 - Узнать **все текущие настройки** git:
-
 
 	git config --list
 
 - Создать новую ветвь и переключиться на неё:
 
-
     git branch new_branch
     git checkout new_branch
+	
 или же
 
     git checkout -b new_branch
 
 
 - Отправить ветвь в удалённый репозиторий:
-
 
     git push origin -u master
     git push origin new_branch
@@ -56,29 +52,24 @@ NB: Вот это `-M`нужно только для переименовани�
 
 - Отменить добавление файлов к отслеживаемым:
 
-
 	git reset
 	git reset <file1> <file2> ...
 
 
 - Удалить последний коммит. При этом все изменения станут как  "Changes to be committed"
 
-
 	git reset --soft HEAD~1
 	
 - Переключиться на коммит просто чтобы посмотреть:
-
 
 	git checkout <hash-value>
 	
 - Извлечь ВЕСЬ репозиторий и перетереть нежелательные изменения в рабочей директории:
 
-
 	git fetch --all
 	get reset --hard origin/master
 	
 - Посмотреть все имеющиеся ветви:
-
 
 	git branch
 	
@@ -88,7 +79,6 @@ NB: Вот это `-M`нужно только для переименовани�
 	git remote -v
 	
 - Сохранить пароль чтобы не вводить каждый раз
-
 
 	git config --global credential.helper wincred
 
@@ -100,7 +90,7 @@ NB: Вот это `-M`нужно только для переименовани�
 
 
 
-- Как (легко удалить)[https://rtyley.github.io/bfg-repo-cleaner/] из истории git ненужные файлы и папки:
+- Как [легко удалить](https://rtyley.github.io/bfg-repo-cleaner/) из истории git ненужные файлы и папки:
 
 
 	java -jar bfg-1.13.1.jar --delete-folders slprj
@@ -110,7 +100,9 @@ NB: Вот это `-M`нужно только для переименовани�
 	
 <details>
 <summary>Пример вывода</summary>
+
 ```shell
+
 	E:\University\11sem\Курсовой_2>java -jar bfg-1.13.1.jar -D *.autosave
 
 	Using repo : E:\University\11sem\Курсовой_2\.git
@@ -172,5 +164,24 @@ NB: Вот это `-M`нужно только для переименовани�
 
 	BFG run is complete! When ready, run: git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
+
 </details>
 
+
+	git log --oneline | wc -l
+	git log --follow <file>
+	git log -2
+	
+	git diff
+	git diff --staged
+	
+	git show <hash>
+	
+	git ls-files
+	git ls-files --others --ignored --exclude-standard
+	
+	git reset <hash>
+	git reset --hard <hash>
+	
+	git fetch
+	
