@@ -1,5 +1,5 @@
 - Супер базовая последовательность действий для создания репозитория:
-    
+
 **Create a new repository on the command line**
     
     echo "# ohlala" >> README.md
@@ -167,6 +167,18 @@ NB: Вот это `-M`нужно только для переименовани�
 
 </details>
 
+	git help
+	git help tutorial
+	git help everyday
+	git help revisions
+	git help workflows
+
+	git branch
+	git branch -M main
+	git branch <new-branch-name>
+	
+	git checkout <new-branch-name>
+	git switch <new-branch-name>
 
 	git log --oneline | wc -l
 	git log --follow <file>
@@ -180,6 +192,8 @@ NB: Вот это `-M`нужно только для переименовани�
 	git ls-files
 	git ls-files --others --ignored --exclude-standard
 	
+	git reset
+	git reset <file1> <file2> ...
 	git reset <hash>
 	git reset --hard <hash>
 	
