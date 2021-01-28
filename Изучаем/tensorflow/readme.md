@@ -39,15 +39,19 @@ NB 1: TensorFlow 2.3 требует **CUDA 10.1 и CuDNN 8.0.4.30**
 - Активируем её: `conda.bat activate tf-2-gpu_23` (`conda deactivate` для выключения)
 - Обновляем пакетный менеджер `pip install --upgrade pip`
 - Устанавливаем свежую версию с помощью pip: `pip install tensorflow-gpu`
-- Связывание нового виртуального окружения с юпитер ноутбуком: `conda install nb_conda_kernels`
-(https://stackoverflow.com/questions/39604271/conda-environments-not-showing-up-in-jupyter-notebook)
+- [Связывание нового виртуального окружения с юпитер ноутбуком](https://stackoverflow.com/questions/39604271/conda-environments-not-showing-up-in-jupyter-notebook): 
+		- `conda install nb_conda`
+		- `conda install nb_conda_kernels`
+		- Обязательно деактивировать и снова активировать среду окружения
+		
 - Ставим остальное сами при необходимости
-
-python test_single_gpu.py
+	- `conda install matplotlib`
+	
+`python test_single_gpu.py`
 
 #### Часть 2. Использование
 
-- Запускаем из консоли `jupyter notebook`
+- Запускаем из консоли `jupyter notebook` или из cnd-файла с содержимым `activate tf-2-gpu && jupyter notebook`
 - В самом ноутбуке нужно выбрать ядро: `Kernel -> Change kernel -> Python[conda env: tf-2-gpu_23]`
 
 - Запуск `tensorboard`:
