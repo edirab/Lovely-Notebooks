@@ -16,7 +16,7 @@ WIDTH_TARGET = 640
 HEIGHT_TARGET  = 480
 
 confTresh = 0.5
-nmsTreshold = 0.3
+nmsTreshold = 0.1
 
 #classesFile = 'classes_coco.txt'
 classesFile = 'v3/classes_yolov3.txt'
@@ -53,8 +53,8 @@ def findObjects(outputs, img):
 
             if confidence > confTresh:
                 w, h = int(det[2] * width), int(det[3] * height)
-                x, y = int( det[0] * width - width/2 ), int( det[1]*height - height/2 )
-                bbox.append([x, y, width, height])
+                x, y = int( det[0] * width - w/2 ), int( det[1]*height - h/2 )
+                bbox.append([x, y, w, h])
                 classIds.append(classId)
                 confs.append(float(confidence))
     #print(len(bbox))
@@ -67,7 +67,7 @@ def findObjects(outputs, img):
         x,y,w,h = box[0], box[1], box[2], box[3]
         cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2 )
         cv2.putText(frame, f'{classNames[classIds[i]].upper() } {int(confs[i] * 100)}%',
-        (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255, 2))
+        (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255, 4))
 
         print(classNames[classIds[i]].upper(), int(confs[i] * 100), ' ', end = '')
 
@@ -78,11 +78,17 @@ def findObjects(outputs, img):
 while True:
     _, frame = cap.read()
 
+    blob_debug = cv2.dnn.blobFromImage(frame, 1/1,
+                                 (WIDH_HEIGHT_TARGET, WIDH_HEIGHT_TARGET),
+                                 #(WIDTH_TARGET, HEIGHT_TARGET),
+                                 [0,0,0], 1, crop = False)
+    # cv2.imshow("Blob", blob_debug[0])
+    # cv2.waitKey(0)
+
     blob = cv2.dnn.blobFromImage(frame, 1/255,
                                  (WIDH_HEIGHT_TARGET, WIDH_HEIGHT_TARGET),
                                  #(WIDTH_TARGET, HEIGHT_TARGET),
                                  [0,0,0], 1, crop = False)
-
     net.setInput(blob)
 
     layerNames = net.getLayerNames()
