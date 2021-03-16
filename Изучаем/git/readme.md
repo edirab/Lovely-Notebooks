@@ -26,17 +26,17 @@ NB: Вот это `-M`нужно только для переименовани�
 
 - Переключение нармального отображения кириллицы в консоли:
 
-    git config --local core.quotepath false
+    `git config --local core.quotepath false`
 
 - Узнать **все текущие настройки** git:
 
-	git config --list
+	`git config --list`
 
 - Создать новую ветвь и переключиться на неё:
 
-    git branch new_branch
-    git checkout new_branch
-	
+        git branch new_branch
+        git checkout new_branch или 
+        git switch new_branch	
 или же
 
     git checkout -b new_branch
@@ -44,9 +44,9 @@ NB: Вот это `-M`нужно только для переименовани�
 
 - Отправить ветвь в удалённый репозиторий:
 
-    git push origin -u master
-    git push origin new_branch
-    git push https://github.com/edirab/Lovely-Notebooks.git new_branch
+        git push origin -u master
+        git push origin new_branch
+        git push https://github.com/edirab/Lovely-Notebooks.git new_branch
     
 Ключ `-u` (`--set-upstream`) делает текущую ветку по умоланию для публикации изменений
 
@@ -92,11 +92,11 @@ NB: Вот это `-M`нужно только для переименовани�
 
 - Как [легко удалить](https://rtyley.github.io/bfg-repo-cleaner/) из истории git ненужные файлы и папки:
 
-
+	java -jar bfg-1.13.1.jar --delete-files id_{dsa,rsa}
 	java -jar bfg-1.13.1.jar --delete-folders slprj
 	java -jar bfg-1.13.1.jar -D *.slxc
 	java -jar bfg-1.13.1.jar -D *.autosave
-	
+	git reflog expire --expire=now --all && git gc --prune=now --aggressive
 	
 <details>
 <summary>Пример вывода</summary>
@@ -196,6 +196,9 @@ NB: Вот это `-M`нужно только для переименовани�
 	git reset <file1> <file2> ...
 	git reset <hash>
 	git reset --hard <hash>
+	git reset --hard HEAD
+	git reset --hard HEAD~1
 	
 	git fetch
+	git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 	
